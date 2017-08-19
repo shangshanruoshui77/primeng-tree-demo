@@ -1,0 +1,13 @@
+<p-growl [value]="msgs"></p-growl>
+
+<div class="ui-g">
+  <div class="ui-g-4">
+    <p-tree [value]="nodeTree" selectionMode="single" [(selection)]="selectedNode" [contextMenu]="cm"></p-tree>
+    <p-contextMenu #cm [model]="items"></p-contextMenu>
+  </div>
+  <div class="ui-g-8">
+    <h3>Add Group</h3>
+    <input id="group-input" type="text" size="30" pInputText title="group name" [(ngModel)]="groupName"/>
+    <button id="group-btn" type="button" (click)="addGroup()" pButton label="Add Group"></button>
+  </div>
+</div>
